@@ -9,16 +9,13 @@ import Contact from './pages/Contact'
 
 function App() {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/homes" element={<Homes />} />
-        <Route path="/community" element={<Community />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
+    <div className="min-h-screen bg-white">
+      <h1 className="text-4xl font-bold text-center py-8 text-black">
+        Choice Valley Homes - Test
+      </h1>
+      <p className="text-center text-gray-600">
+        If you can see this, React is working
+      </p>
     </div>
   )
 }
