@@ -20,12 +20,12 @@ export default function Header() {
             </Link>
             
             <nav className="flex items-center space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-primary transition-colors">
-                Home
+              <Link to="/about" className="text-gray-700 hover:text-primary transition-colors">
+                ABOUT
               </Link>
               <div className="relative group">
                 <button className="text-gray-700 hover:text-primary transition-colors flex items-center">
-                  Homes
+                  FLOOR PLANS
                   <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m19 9-7 7-7-7" />
                   </svg>
@@ -41,14 +41,11 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-              <Link to="/about" className="text-gray-700 hover:text-primary transition-colors">
-                About
-              </Link>
               <Link to="/community" className="text-gray-700 hover:text-primary transition-colors">
-                Community
+                COMMUNITY
               </Link>
               <Link to="/contact" className="text-gray-700 hover:text-primary transition-colors">
-                Contact
+                CONTACT
               </Link>
             </nav>
 
@@ -56,7 +53,7 @@ export default function Header() {
               href="/listings/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary/90 transition-colors flex items-center gap-2"
+              className="bg-orange-400 text-white px-6 py-3 rounded-md hover:bg-orange-500 transition-colors flex items-center gap-2"
             >
               <svg className="w-4 h-4" viewBox="0 0 15 15" fill="currentColor">
                 <path d="M13.5 4.1L8.8.4C8.4.1 8 0 7.5 0s-.9.1-1.3.4L1.5 4.1C.8 4.7.4 5.6.4 6.5v7.1c0 .8.6 1.4 1.4 1.4H13.2c.8 0 1.4-.6 1.4-1.4V6.5c0-.9-.4-1.8-1.1-2.4zM9 13.5H6V7.7c0-.4.3-.7.6-.7h1.7c.4 0 .7.3.7.7v5.8zm4.1-.2c0 .1-.1.2-.2.2h-2.4V7.7c0-1.2-1-2.1-2.1-2.1H6.6c-1.2 0-2.1 1-2.1 2.1v5.8H2.1c-.1 0-.2-.1-.2-.2V6.5c0-.5.2-1 .6-1.3L7 1.7c.2-.1.3-.2.5-.2s.4.1.5.2l4.4 3.5c.4.3.6.8.6 1.3v6.8z"/>

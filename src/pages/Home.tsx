@@ -1,30 +1,73 @@
+const homeModels = [
+  {
+    name: 'Oceanside',
+    image: '/wp-content/uploads/2022/11/AdobeStock_275971688-1024x1024.jpeg'
+  },
+  {
+    name: 'Skyview',
+    image: '/wp-content/uploads/2022/11/AdobeStock_275971688-1024x1024.jpeg'
+  },
+  {
+    name: 'Windridge',
+    image: '/wp-content/uploads/2022/11/AdobeStock_275971688-1024x1024.jpeg'
+  },
+  {
+    name: 'Mountain Top',
+    image: '/wp-content/uploads/2022/11/AdobeStock_275971688-1024x1024.jpeg'
+  }
+]
+
 export default function Home() {
   return (
     <main>
       {/* Hero Section */}
       <section 
-        className="relative min-h-[600px] bg-cover bg-center bg-no-repeat flex items-center"
+        className="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white"
         style={{
-          backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0.91) 0%, rgba(0,0,0,0.57) 100%), url('/wp-content/uploads/2022/11/Neighborhood_Map_Render-scaled.jpg')`
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/lovable-uploads/dfb35a0a-c396-4426-971d-988a0e40e8fa.png')`
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 text-white">
-          <div className="max-w-2xl">
-            <h1 className="text-6xl lg:text-8xl font-bold mb-6">
-              PASEO
+        <div className="text-center space-y-8">
+          <div className="space-y-4">
+            <h1 className="text-6xl lg:text-8xl font-bold tracking-wider">
+              CHOICE VALLEY <span className="block">HOMES</span>
             </h1>
-            <p className="text-xl lg:text-2xl leading-relaxed">
-              Discover your dream home in the heart of Merced's newest community. 
-              Modern designs, quality craftsmanship, and thoughtful amenities await.
+            <p className="text-2xl lg:text-4xl font-script italic">
+              Presents
             </p>
+            <h2 className="text-5xl lg:text-7xl font-bold tracking-widest">
+              PASEO
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      {/* Home Models Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {homeModels.map((home, index) => (
+              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <div className="aspect-w-16 aspect-h-12">
+                  <img
+                    src={home.image}
+                    alt={home.name}
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="text-lg font-semibold text-gray-900">{home.name}</h3>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
               <div className="p-8">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
@@ -98,29 +141,16 @@ export default function Home() {
                     ></textarea>
                   </div>
                   
-                  <div className="flex items-start space-x-3">
-                    <input
-                      type="checkbox"
-                      id="terms"
-                      name="terms"
-                      required
-                      className="mt-1 h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
-                    />
-                    <label htmlFor="terms" className="text-sm text-gray-700">
-                      By pressing the Submit button, I agree to Choice Valley contacting me by email and/or phone to share home availability information or related opportunities. I also understand that any information I've shared in this form is subject to Choice Valley Homes' Privacy Policy.
-                    </label>
-                  </div>
-                  
                   <button
                     type="submit"
-                    className="w-full bg-primary text-white py-3 px-6 rounded-md hover:bg-primary/90 transition-colors font-medium"
+                    className="w-full bg-orange-400 text-white py-3 px-6 rounded-md hover:bg-orange-500 transition-colors font-medium"
                   >
                     Submit
                   </button>
                 </form>
               </div>
               
-              <div className="bg-gray-100 p-8 flex items-center justify-center">
+              <div className="bg-gray-200 p-8 flex items-center justify-center">
                 <img
                   src="/wp-content/uploads/2022/11/AdobeStock_275971688-1024x1024.jpeg"
                   alt="Beautiful home"
